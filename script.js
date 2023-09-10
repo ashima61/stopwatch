@@ -36,7 +36,7 @@ document.getElementById("count").innerHTML="00";
 
 //to run the program
 //It checks if the timer variable is true, indicating that the timer is running. If it is, the function increments the count variable 
-and checks if it reaches 60.If so, it increments the sec variable and resets the count to 0. Similar checks are performed for minutes and hours
+//and checks if it reaches 60.If so, it increments the sec variable and resets the count to 0. Similar checks are performed for minutes and hours
 function stopWatch(){
     if(timer==true){
         count++;
