@@ -1,4 +1,4 @@
-//variables
+//variables to keep track of the hours, minutes, seconds, and a count value in the timer
 
 var hr = 0;
 var min = 0;
@@ -9,12 +9,13 @@ var count = 0;
 var timer = false;
 
 //onclick 
-
+// It sets the timer variable to true to indicate that the timer is running and then calls the stopWatch() function
 function start(){
     timer=true;
     stopWatch();
 }
 
+//This function is called when the "Stop" button is clicked. It sets the timer variable to false, effectively pausing the timer
 function stop(){
     timer=false;
 }
@@ -34,7 +35,8 @@ document.getElementById("count").innerHTML="00";
 }
 
 //to run the program
-
+//It checks if the timer variable is true, indicating that the timer is running. If it is, the function increments the count variable 
+and checks if it reaches 60.If so, it increments the sec variable and resets the count to 0. Similar checks are performed for minutes and hours
 function stopWatch(){
     if(timer==true){
         count++;
@@ -77,6 +79,8 @@ function stopWatch(){
         document.getElementById("sec").innerHTML = secString;
         document.getElementById("count").innerHTML = countString;
 
+        //schedules the stopWatch function to be called again after a 10-millisecond delay, creating the effect of a 
+        continuously updating timer as long as timer is true
         setTimeout("stopWatch()",10);
     }
 }
