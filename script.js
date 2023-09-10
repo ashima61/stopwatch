@@ -80,7 +80,7 @@ function stopWatch(){
         document.getElementById("count").innerHTML = countString;
 
         //schedules the stopWatch function to be called again after a 10-millisecond delay, creating the effect of a 
-        continuously updating timer as long as timer is true
+       // continuously updating timer as long as timer is true
         setTimeout("stopWatch()",10);
     }
 }
